@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swashbuckle.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -19,6 +20,12 @@ namespace College.Service.WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            /* Swagger Configuration */
+            config.EnableSwagger(c => {
+                c.SingleApiVersion("V1", "MyCollegeAPI");
+                c.IncludeXmlComments($"{AppDomain.CurrentDomain.BaseDirectory}\\bin\\College.Service.WebApi.xml");
+                }).EnableSwaggerUi();
         }
     }
 }
