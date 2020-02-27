@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace College.Service.WebApi.Controllers
 {
+    [Authorize]
     public class ValuesController : ApiController
     {
         /// <summary>
