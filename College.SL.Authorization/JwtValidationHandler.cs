@@ -1,18 +1,18 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
-using College.SL.Authorization;
-using System.IdentityModel.Tokens.Jwt;
 
-namespace College.Service.WebApi.Filters
+namespace College.SL.Authorization
 {
-    public class JwtValidationHandler : DelegatingHandler
+    public class JwtValidationHandler: DelegatingHandler
     {
         private static bool TryRetrieveToken(HttpRequestMessage request, out string token)
         {
