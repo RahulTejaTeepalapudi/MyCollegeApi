@@ -195,6 +195,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AuthorizeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -290,6 +291,10 @@
     <ProjectReference Include="..\College.BL\College.BL.csproj">
       <Project>{916dd068-d5c5-4793-9521-32a1400770a0}</Project>
       <Name>College.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\College.BusinessModels.Entities\College.BusinessModels.csproj">
+      <Project>{4ec07c2d-d119-4bc2-92d2-d8e872302131}</Project>
+      <Name>College.BusinessModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\College.CL\College.CL.csproj">
       <Project>{e29a8b33-b354-41ad-9e34-1e48456c02af}</Project>

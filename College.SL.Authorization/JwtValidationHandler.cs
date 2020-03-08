@@ -41,7 +41,6 @@ namespace College.SL.Authorization
             {
                 var securityKey = new SymmetricSecurityKey(System.Text.Encoding.Default.GetBytes(JwtConfig.Secret));
 
-                SecurityToken securityToken;
                 var handler = new JwtSecurityTokenHandler();
                 var validationParameters = new TokenValidationParameters()
                 {
@@ -53,7 +52,7 @@ namespace College.SL.Authorization
                     IssuerSigningKey = securityKey
                 };
                 //extract and assign the user of the jwt
-                Thread.CurrentPrincipal = handler.ValidateToken(token, validationParameters, out securityToken);
+                Thread.CurrentPrincipal = handler.ValidateToken(token, validationParameters, out SecurityToken securityToken);
                 HttpContext.Current.User = handler.ValidateToken(token, validationParameters, out securityToken);
 
                 return base.SendAsync(request, cancellationToken);

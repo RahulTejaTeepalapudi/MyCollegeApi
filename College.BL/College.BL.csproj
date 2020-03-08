@@ -41,11 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\StudentService.cs" />
+    <Compile Include="Interfaces\IStudentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implementations\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\College.BusinessModels.Entities\College.BusinessModels.csproj">
+      <Project>{4ec07c2d-d119-4bc2-92d2-d8e872302131}</Project>
+      <Name>College.BusinessModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\College.DAL.AdoRepository\College.DAL.AdoRepository.csproj">
+      <Project>{7bac46dc-775d-4d89-88b4-5b2a957b5fd0}</Project>
+      <Name>College.DAL.AdoRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\College.DAL.EFRepository\College.DAL.EFRepository.csproj">
+      <Project>{576ad380-d912-4d7e-b71d-1ac040a028cb}</Project>
+      <Name>College.DAL.EFRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\College.DAL.IRepository\College.DAL.IRepository.csproj">
+      <Project>{b9a87f5e-4e07-4586-b39d-ad4c4f2e66eb}</Project>
+      <Name>College.DAL.IRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

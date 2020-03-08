@@ -42,9 +42,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\College.BusinessModels.Entities\College.BusinessModels.csproj">
+      <Project>{4ec07c2d-d119-4bc2-92d2-d8e872302131}</Project>
+      <Name>College.BusinessModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\College.CL\College.CL.csproj">
+      <Project>{e29a8b33-b354-41ad-9e34-1e48456c02af}</Project>
+      <Name>College.CL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\College.DAL.IRepository\College.DAL.IRepository.csproj">
+      <Project>{b9a87f5e-4e07-4586-b39d-ad4c4f2e66eb}</Project>
+      <Name>College.DAL.IRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

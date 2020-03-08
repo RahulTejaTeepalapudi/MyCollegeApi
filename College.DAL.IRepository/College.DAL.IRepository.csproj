@@ -41,10 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRepositories\IStudentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IRepositories\" />
+    <ProjectReference Include="..\College.BusinessModels.Entities\College.BusinessModels.csproj">
+      <Project>{4ec07c2d-d119-4bc2-92d2-d8e872302131}</Project>
+      <Name>College.BusinessModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
